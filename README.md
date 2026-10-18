@@ -3,10 +3,8 @@
 Agentic SEO pipeline for [entropyand.co](https://entropyand.co): it finds the next article worth writing,
 researches it from fetched sources, writes it, has an expert panel review it, and saves it to the Framer CMS.
 
-It is a port of the BallersBank SEO engine (`../seo-ballersbank`) retargeted at Entropy's audience:
-agency owners and operators of $1M to $50M businesses deciding where AI agents and automation pay off.
-The Shopify, catalog, and sports-card parts are gone; Framer publishing, B2B topic strategy, and a
-provider-agnostic LLM layer (Claude or OpenAI) are new.
+It writes for agency owners and operators of $1M to $50M businesses deciding where AI agents and
+automation pay off. Articles publish to Framer only; there is no other CMS or storefront integration.
 
 ## Pipeline
 
@@ -26,15 +24,15 @@ guards (velocity caps)
   └─ finalize   calendar row + ledger + cost summary
 ```
 
-| BallersBank | Entropy engine |
+| Part | How |
 |---|---|
-| Shopify blog publish | Framer CMS via `framer-bridge/` (official `framer-api`, Node) |
-| Google Sheet calendar | `state/calendar.json` (atomic writes; same reserve/finalize lifecycle) |
-| LangChain `ChatAnthropic` | `llm.py`: official `anthropic` and `openai` SDKs, per-tier provider |
-| Temperature per draft/revision | `effort` per tier (Claude 5.x rejects sampling params) |
-| last30days (Reddit/HN/YouTube via BrightData) | Hacker News Algolia API (free, no proxy) |
-| Product links + commerce CTA | Service-page + related-article links, one restrained contact CTA |
-| Collector vocabulary in dedupe | B2B/AI-ops vocabulary; dedupe against live sitemap + Framer + ledger |
+| Publishing | Framer CMS via `framer-bridge/` (official `framer-api`, Node) |
+| Content calendar | `state/calendar.json` (atomic writes; reserve/finalize lifecycle) |
+| Models | `llm.py`: official `anthropic` and `openai` SDKs, per-tier provider |
+| Depth control | `effort` per tier (Claude 5.x rejects sampling params) |
+| Trend signals | Hacker News Algolia API (free, no proxy) |
+| Links and CTA | Service-page + related-article links, one restrained contact CTA |
+| Dedupe | B2B/AI-ops vocabulary; against the live sitemap, Framer, and the ledger |
 
 ## Setup
 

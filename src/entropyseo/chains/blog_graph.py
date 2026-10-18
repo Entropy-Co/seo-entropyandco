@@ -14,7 +14,7 @@
                                      ▼                           ▼
                                   finalize (same calendar row, ledger, cost)
 
-Design rules carried over from the BallersBank engine:
+Design rules:
 - persistence always runs, so every run leaves a reviewable artifact
 - Framer is touched only when SEO_PUBLISH_ENABLED=true, DRY_RUN=false, and the panel shipped
 - the run-level cost cap stops revision loops before they overspend

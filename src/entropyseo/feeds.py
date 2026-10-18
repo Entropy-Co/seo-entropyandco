@@ -1,8 +1,8 @@
 """Article format policy for the Entropy & Co. blog.
 
-One feed today (long-form operator guides). The policy object mirrors the
-BallersBank feed contract so a second feed (e.g. comparison pages or playbooks)
-can be added without touching the format checker.
+One feed today (long-form operator guides). The policy object is the feed
+contract, so a second feed (e.g. comparison pages or playbooks) can be added
+without touching the format checker.
 """
 
 from __future__ import annotations
