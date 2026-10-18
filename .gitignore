@@ -1,0 +1,14 @@
+.env
+.env.local
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+dist/
+framer-bridge/node_modules/
+# Run artifacts and local state (calendar, ledger, corpus cache)
+drafts/
+state/
+.DS_Store

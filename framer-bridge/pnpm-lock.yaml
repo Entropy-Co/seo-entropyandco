@@ -1,0 +1,44 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      framer-api:
+        specifier: 5.1.0
+        version: 5.1.0(csstype@3.2.3)
+
+packages:
+
+  csstype@3.2.3:
+    resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
+
+  devalue@5.9.4:
+    resolution: {integrity: sha512-sPAT4pztbu6586/hrhOnMKS17IJrvg12mXiSPSS3W5qDeN2RGgvZ0diZCm31dBbnevfVmujNO3IM2wrS4Y2Rhg==}
+
+  framer-api@5.1.0:
+    resolution: {integrity: sha512-L3CAdLRtulyX0OfCs+cAyo+kE1OfG408fIvHOCrqnwWXneZ/Ko2Nw4DdjlFWxomF7SkpaoONdoOKT5etSi5j2g==}
+    engines: {node: '>=22'}
+    peerDependencies:
+      csstype: ^3.1.1
+
+  std-env@4.3.0:
+    resolution: {integrity: sha512-OtU/EgQ1kIm5KwqQpBC6ZEMXrZRui11w8zgfTWp8cdO9B8OaPsbA8bTHO2P+HNo1VlUTGMVBwPhydu6poeXiag==}
+
+snapshots:
+
+  csstype@3.2.3: {}
+
+  devalue@5.9.4: {}
+
+  framer-api@5.1.0(csstype@3.2.3):
+    dependencies:
+      csstype: 3.2.3
+      devalue: 5.9.4
+      std-env: 4.3.0
+
+  std-env@4.3.0: {}

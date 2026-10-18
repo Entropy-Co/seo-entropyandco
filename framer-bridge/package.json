@@ -1,0 +1,13 @@
+{
+  "name": "entropyseo-framer-bridge",
+  "private": true,
+  "type": "module",
+  "description": "JSON stdin/stdout bridge from the Python SEO engine to the Framer Server API",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "check": "node --check bridge.mjs"
+  },
+  "dependencies": {
+    "framer-api": "5.1.0"
+  }
+}

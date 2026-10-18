@@ -1,0 +1,51 @@
+# Framer CMS mapping for the entropyand.co blog collection.
+#
+# Values are EXACT Framer field names (case-sensitive), not IDs; the bridge resolves
+# names to field IDs and types at write time. Set a field to null to skip it.
+#
+# Verified against the live "Entropy and Co" project with `uv run entropyseo framer-check` (2026-10-18).
+# Re-run it after renaming fields in Framer.
+
+collection: "Articles"
+
+fields:
+  title: "Title"
+  body: "Content"
+  excerpt: "Short Description"
+  meta_title: "Meta Title"
+  meta_description: "Meta Description"
+  published_date: "Date"
+  author: null
+  category: "Category"
+  cover_image: "Image"
+  read_time: null
+  updated_at: "Updated At"
+  topic_pillar: "Topic Pillar"
+  target_keywords: "Target Keywords"
+  # Article JSON-LD as a string; the blog template must render it in a ld+json script.
+  schema_json_ld: "Schema JSON-LD"
+
+# html (default) or markdown; Framer formattedText accepts both.
+body_content_type: html
+
+# Enum cases in Framer: Article, Resources.
+default_category: "Article"
+default_cover_image_url: ""
+default_cover_image_alt: ""
+
+# niche.yaml pillar name -> the "Topic Pillar" id the existing articles use. Also the
+# JSON-LD articleSection. A pillar missing here is written by its niche.yaml name.
+topic_pillars:
+  "AI agents and workflow automation": "agentic-deployment"
+  "AI for agencies": "agency-ops"
+  "AI marketing operations": "agency-ops"
+  "AI ROI and operating cost": "agentic-deployment"
+  "Data, reporting, and strategy simulation": "ai-infrastructure"
+  "Industry AI playbooks": "applied-ai-vertical"
+  "Custom AI and software builds": "agentic-deployment"
+
+# Article JSON-LD constants, matching the 129 existing records.
+schema:
+  blog_name: "Entropy & Co. Blog"
+  language: "en-US"
+  max_about_terms: 8

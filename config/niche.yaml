@@ -1,0 +1,237 @@
+# Entropy & Co. · Niche configuration
+#
+# Single source of truth for everything brand-specific. Every agent reads this at
+# run time via entropyseo.config.load_niche_config(). Sources: entropyand.co public
+# pages (sitemap, services) and the EnCo pitch deck (30 July).
+#
+# Rules for editing:
+# - proof_claims reach prompts only when verified: true. Flip a claim only after
+#   confirming it is public and approved for marketing use.
+# - priority_keywords are seed hypotheses, not measured demand. Keyword research
+#   expands and scores them; dedupe drops anything the site already covers.
+
+brand_entity:
+  name: "Entropy & Co."
+  url: "https://entropyand.co/"
+  positioning: >-
+    Agentic AI infrastructure for de-risking operations, built for agencies and growing businesses:
+    AI agents that act as a virtual workforce (execution), one dashboard and knowledge base for the
+    whole organization (data), and strategy simulation that tests a plan before budget is spent (intelligence).
+  description: >-
+    An AI-native agency that designs and builds AI agents, workflow automation, connected marketing
+    operations (SEO, content, email, paid ads), and custom AI and software, with human review points
+    and measurable business goals. Offered as an enterprise suite, a done-with-you build-train-handoff
+    engagement for SMEs and agencies, and self-serve SaaS.
+  logo_url:
+  contact_email:
+  social_profiles: []
+  service_areas: []
+  proof_claims:
+    # From the pitch deck. Unverified until confirmed public and approved; never shown to the writer while false.
+    - claim: "Member of the Anthropic Claude Partner Network"
+      verified: false
+    - claim: "Member of the AWS Partner Network"
+      verified: false
+    - claim: "Part of Google for Startups"
+      verified: false
+    - claim: "Selected for the Perplexity AI Business Fellowship"
+      verified: false
+    - claim: "Co-built and deployed agent products including Obelisk (AI CMO), AgentSpace, and Anatomia"
+      verified: false
+
+pillars:
+  - name: "AI agents and workflow automation"
+    description: "Where agents beat rules, how to scope, build, test, and run automated workflows with human review."
+    priority: 1
+    service_url: "https://entropyand.co/services/ai-automation"
+  - name: "AI for agencies"
+    description: "De-risking agency operations: delivery capacity, client reporting, reducing key-person dependency, margins."
+    priority: 2
+    service_url: "https://entropyand.co/services/ai-automation"
+  - name: "AI marketing operations"
+    description: "An AI CMO approach: research-driven strategy, content, SEO, email, social, and paid ads run as one connected system."
+    priority: 3
+    service_url: "https://entropyand.co/services/digital-marketing"
+  - name: "AI ROI and operating cost"
+    description: "Cost math for agents versus offshore teams, BPO, operators, and software bloat; measuring what actually changed."
+    priority: 4
+    service_url: "https://entropyand.co/services/ai-automation"
+  - name: "Data, reporting, and strategy simulation"
+    description: "One source of truth for marketing and ops data, knowledge bases, evaluators, and testing strategies before spending."
+    priority: 5
+    service_url: "https://entropyand.co/services/ml-ai"
+  - name: "Industry AI playbooks"
+    description: "Vertical guides for dental, real estate, insurance, law firms, home services, healthcare, and other local businesses."
+    priority: 6
+    service_url: "https://entropyand.co/services/ai-automation"
+  - name: "Custom AI and software builds"
+    description: "When to build custom agents or software instead of stitching tools, and how to run the build safely."
+    priority: 7
+    service_url: "https://entropyand.co/services/software-development"
+
+priority_keywords:
+  - {term: "ai agents for marketing agencies", intent: commercial, pillar: "AI for agencies"}
+  - {term: "ai automation for agencies", intent: commercial, pillar: "AI for agencies"}
+  - {term: "agency client reporting automation", intent: commercial, pillar: "AI for agencies"}
+  - {term: "white label ai automation for agencies", intent: commercial, pillar: "AI for agencies"}
+  - {term: "n8n vs custom ai agents", intent: commercial, pillar: "AI agents and workflow automation"}
+  - {term: "make vs n8n for agencies", intent: commercial, pillar: "AI agents and workflow automation"}
+  - {term: "human in the loop ai agents", intent: informational, pillar: "AI agents and workflow automation"}
+  - {term: "ai agent evaluation", intent: informational, pillar: "Data, reporting, and strategy simulation"}
+  - {term: "ai agents vs offshore team", intent: commercial, pillar: "AI ROI and operating cost"}
+  - {term: "bpo vs ai automation cost", intent: commercial, pillar: "AI ROI and operating cost"}
+  - {term: "ai automation roi calculator", intent: commercial, pillar: "AI ROI and operating cost"}
+  - {term: "reduce software costs with ai", intent: commercial, pillar: "AI ROI and operating cost"}
+  - {term: "ai cmo", intent: informational, pillar: "AI marketing operations"}
+  - {term: "ai marketing automation for small business", intent: commercial, pillar: "AI marketing operations"}
+  - {term: "jasper alternatives for agencies", intent: commercial, pillar: "AI marketing operations"}
+  - {term: "marketing strategy simulation", intent: informational, pillar: "Data, reporting, and strategy simulation"}
+  - {term: "digital twin for marketing", intent: informational, pillar: "Data, reporting, and strategy simulation"}
+  - {term: "ai knowledge base for business", intent: commercial, pillar: "Data, reporting, and strategy simulation"}
+  - {term: "ai automation for insurance agencies", intent: commercial, pillar: "Industry AI playbooks"}
+  - {term: "ai automation for law firms", intent: commercial, pillar: "Industry AI playbooks"}
+  - {term: "ai automation for real estate teams", intent: commercial, pillar: "Industry AI playbooks"}
+  - {term: "custom ai agent development cost", intent: commercial, pillar: "Custom AI and software builds"}
+
+target_personas:
+  - name: "Agency owner"
+    description: "Runs a marketing, insurance, or real estate agency; wants delivery capacity and margin without adding headcount or depending on a few key people."
+    priority_level: primary
+  - name: "SMB operator"
+    description: "Founder or COO of a $1M to $50M business evaluating where AI agents pay off and what they really cost."
+    priority_level: primary
+  - name: "Marketing leader"
+    description: "CMO or head of growth who needs ROI visibility across channels and a lean, AI-assisted team."
+    priority_level: secondary
+  - name: "Operations or support lead"
+    description: "Owns ticket queues, intake, scheduling, or reporting and wants fewer manual handoffs with clear escalation."
+    priority_level: secondary
+
+internal_pages:
+  - {url: "https://entropyand.co/services/ai-automation", anchor: "AI automation services", pillars: ["AI agents and workflow automation", "AI for agencies", "AI ROI and operating cost"]}
+  - {url: "https://entropyand.co/services/digital-marketing", anchor: "connected digital marketing", pillars: ["AI marketing operations"]}
+  - {url: "https://entropyand.co/services/content-marketing", anchor: "content marketing pipeline", pillars: ["AI marketing operations"]}
+  - {url: "https://entropyand.co/services/seo", anchor: "SEO services", pillars: ["AI marketing operations"]}
+  - {url: "https://entropyand.co/services/email-marketing", anchor: "email marketing", pillars: ["AI marketing operations"]}
+  - {url: "https://entropyand.co/services/paid-ads", anchor: "paid ads management", pillars: ["AI marketing operations"]}
+  - {url: "https://entropyand.co/services/ml-ai", anchor: "custom AI and machine learning", pillars: ["Data, reporting, and strategy simulation", "Custom AI and software builds"]}
+  - {url: "https://entropyand.co/services/software-development", anchor: "custom software development", pillars: ["Custom AI and software builds"]}
+  - {url: "https://entropyand.co/services/ai-automation-for-insurance-agencies", anchor: "AI automation for insurance agencies", pillars: ["Industry AI playbooks", "AI for agencies"]}
+  - {url: "https://entropyand.co/services/ai-automation-for-real-estate", anchor: "AI automation for real estate", pillars: ["Industry AI playbooks"]}
+  - {url: "https://entropyand.co/services/ai-automation-for-law-firms", anchor: "AI automation for law firms", pillars: ["Industry AI playbooks"]}
+  - {url: "https://entropyand.co/services/ai-automation-for-dental", anchor: "AI automation for dental practices", pillars: ["Industry AI playbooks"]}
+  - {url: "https://entropyand.co/services/ai-automation-for-healthcare-clinics", anchor: "AI automation for healthcare clinics", pillars: ["Industry AI playbooks"]}
+  - {url: "https://entropyand.co/services/ai-automation-for-home-services", anchor: "AI automation for home services", pillars: ["Industry AI playbooks"]}
+  - {url: "https://entropyand.co/services/ai-automation-for-mortgage-brokers", anchor: "AI automation for mortgage brokers", pillars: ["Industry AI playbooks"]}
+  - {url: "https://entropyand.co/services/ai-automation-for-financial-advisors", anchor: "AI automation for financial advisors", pillars: ["Industry AI playbooks"]}
+  - {url: "https://entropyand.co/services/ai-automation-for-ecommerce", anchor: "AI automation for ecommerce", pillars: ["Industry AI playbooks"]}
+  - {url: "https://entropyand.co/contact", anchor: "book a workflow audit", purpose: "Primary CTA", pillars: ["cta"]}
+
+trend_queries:
+  - "AI agents"
+  - "agentic workflows"
+  - "n8n"
+  - "LLM evaluation"
+  - "AI automation business"
+  - "AI marketing"
+
+banned_topics:
+  - "cryptocurrency trading"
+  - "gambling"
+  - "adult content"
+  - "political campaigns"
+  - "medical diagnosis advice"
+  - "legal advice for specific cases"
+
+prohibited_claims:
+  - "Guaranteed rankings, revenue, savings, or ROI"
+  - "Hallucination-free or error-free AI output"
+  - "Fully autonomous agents that need no human oversight"
+  - "Named clients, client logos, testimonials, or case results unless listed as a verified proof claim"
+  - "Pitch-deck traction figures (revenue, GMV, valuation, customer counts)"
+  - "Partner-network memberships unless listed as a verified proof claim"
+  - "Specific prices for Entropy services"
+  - "Compliance certifications (SOC 2, HIPAA, GDPR) for Entropy"
+
+approved_external_domains:
+  # Standards, research, and public data
+  - nist.gov
+  - oecd.org
+  - europa.eu
+  - artificialintelligenceact.eu
+  - bls.gov
+  - sba.gov
+  - census.gov
+  - ftc.gov
+  - stanford.edu
+  - mit.edu
+  - pewresearch.org
+  - mckinsey.com
+  - gartner.com
+  - forrester.com
+  - deloitte.com
+  - bcg.com
+  - hbr.org
+  # Platform and vendor documentation (fine to cite for capabilities)
+  - developers.google.com
+  - support.google.com
+  - blog.google
+  - anthropic.com
+  - docs.anthropic.com
+  - openai.com
+  - platform.openai.com
+  - n8n.io
+  - docs.n8n.io
+  - make.com
+  - zapier.com
+  - hubspot.com
+  - salesforce.com
+  - zendesk.com
+  - intercom.com
+  - microsoft.com
+  - learn.microsoft.com
+  - aws.amazon.com
+  - cloud.google.com
+  - ibm.com
+  - jasper.ai
+  - gohighlevel.com
+
+# Rival agencies only. Tool vendors belong in approved_external_domains above.
+competitor_domains: []
+
+# Authority pages fetched for a pillar when SerpAPI is unavailable (verify with `entropyseo sources-check`).
+seed_sources:
+  "AI agents and workflow automation":
+    - "https://www.anthropic.com/engineering/building-effective-agents"
+    - "https://www.nist.gov/itl/ai-risk-management-framework"
+  "AI for agencies":
+    - "https://www.anthropic.com/engineering/building-effective-agents"
+  "AI marketing operations":
+    - "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+    - "https://developers.google.com/search/docs/appearance/ai-features"
+  "AI ROI and operating cost":
+    - "https://www.nist.gov/itl/ai-risk-management-framework"
+  "Data, reporting, and strategy simulation":
+    - "https://www.nist.gov/itl/ai-risk-management-framework"
+  "Industry AI playbooks":
+    - "https://www.nist.gov/itl/ai-risk-management-framework"
+    - "https://www.anthropic.com/engineering/building-effective-agents"
+  "Custom AI and software builds":
+    - "https://www.anthropic.com/engineering/building-effective-agents"
+
+voice:
+  perspective: "first-person plural for Entropy's editorial view; second person for the reader"
+  tone: "Senior operator talking to a peer: practical, numerate, calm, honest about tradeoffs. Sales-aware, never salesy."
+  banned_characters: ["—", "–"]
+  banned_phrases:
+    - "in today's fast-paced world"
+    - "game-changer"
+    - "unlock the power"
+    - "take your business to the next level"
+    - "revolutionize"
+    - "supercharge"
+    - "cutting-edge"
+    - "seamless"
+    - "delve"
+    - "hallucination-free"
+  max_paragraph_length_sentences: 4
